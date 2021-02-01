@@ -9,7 +9,7 @@ Signal Processing Toolbox in MATLAB).
 2- Then I annotated the data using Labelme (it is a graphical image annotation tool inspired by http://labelme.csail.mit.edu.
 It is written in Python and uses Qt for its graphical interface).
 
-3- Using binary_masks.py I created the mask folder, which keep segmentation images.
+3- Using binary_masks.py I created the mask folder, which keep segmentation images (use poligons in json from Labelme).
 
 4- Using opencv, I resized the image to 512 x 512 (resized.py).
 
