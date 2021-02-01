@@ -47,14 +47,14 @@ def create_binary_masks(im, shape_dicts):
 
 
 #Create binary masks
-image_list = sorted(os.listdir('path'), key=lambda x: int(x.split('.')[0]))
-annot_list = sorted(os.listdir('path'), key=lambda x: int(x.split('.')[0]))
+image_list = sorted(os.listdir('path_to_image'), key=lambda x: int(x.split('.')[0]))
+annot_list = sorted(os.listdir('path_to_annot'), key=lambda x: int(x.split('.')[0]))
 
 for im_fn, ann_fn in zip(image_list, annot_list):
     
-    im = cv2.imread(os.path.join('D:\\Neuronets\\segnet\\Image\\train', im_fn), 0)
+    im = cv2.imread(os.path.join('path_to_image', im_fn), 0)
     
-    ann_path = os.path.join('D:\\Neuronets\\segnet\\annot', ann_fn)
+    ann_path = os.path.join('path_to_annot', ann_fn)
     shape_dicts = get_poly(ann_path)
     im_binary = create_binary_masks(im, shape_dicts)
     #create new directory with masks images
