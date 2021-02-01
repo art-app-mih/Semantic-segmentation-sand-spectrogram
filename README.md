@@ -9,10 +9,12 @@ Signal Processing Toolbox in MATLAB).
 2- Then I annotated the data using Labelme (it is a graphical image annotation tool inspired by http://labelme.csail.mit.edu.
 It is written in Python and uses Qt for its graphical interface).
 
-3- Using opencv, I resized the image to 512 x 512 (resized.py).
+3- Using binary_masks.py I created the mask folder, which keep segmentation images.
 
-4- Then I created a DataLoaderSegmentation.py, the data in which is converted to the TORCH.UTILS.DATA format (necessary to load data into a neural network written in pytorch).
+4- Using opencv, I resized the image to 512 x 512 (resized.py).
 
-5- Then I wrote a neural network of the Unet architecture, which shows some of the best results for image segmentation (Unet.py)
+5- Then I created a DataLoaderSegmentation.py, the data in which is converted to the TORCH.UTILS.DATA format (necessary to load data into a neural network written in pytorch).
 
-6- The neural network training process is described in traner.py.
+6- Then I wrote a neural network of the Unet architecture, which shows some of the best results for image segmentation (Unet.py)
+
+7- The neural network training process is described in traner.py.
